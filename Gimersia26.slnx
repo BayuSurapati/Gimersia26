@@ -116,6 +116,7 @@
   <Project Path="Unity.AI.Assistant.Bridge.Editor.csproj" />
   <Project Path="Unity.AI.Generators.Sdk.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.004.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.AI.Tracing.csproj" />
