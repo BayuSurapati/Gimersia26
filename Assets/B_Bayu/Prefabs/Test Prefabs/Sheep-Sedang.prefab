@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 540884337218738487}
   - component: {fileID: 8740900298588171330}
   - component: {fileID: 3000938213214038533}
+  - component: {fileID: 3145808363084625678}
   m_Layer: 0
   m_Name: Sheep-Sedang
   m_TagString: Untagged
@@ -208,4 +209,19 @@ MonoBehaviour:
   jumpBuffer: 0.12
   fallGravityMultiplier: 1.8
   spriteRenderer: {fileID: 7286568434367701757}
-  activeOnStart: 1
+  activeOnStart: 0
+--- !u!114 &3145808363084625678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056556827200198394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495e0931ffeae541a9a0d848960e091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BounceProfile
+  bounceMultiplier: 1
+  chainEnabled: 1
+  landThreshold: 0.1
