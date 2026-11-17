@@ -133,7 +133,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 79e9b404a40be5b48971342c8068ff68, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   maxGroundAngle: 50
+  sideInset: 0.1
 --- !u!114 &3000938213214038533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
   jumpAction: {fileID: -1369513637075862187, guid: bcb685e9cb99ea544b99de5cc94b4f22, type: 3}
   moveSpeed: 4
   acceleration: 60
-  jumpVelocity: 9
+  jumpVelocity: 7
   strength: 3
   coyoteTime: 0.1
   jumpBuffer: 0.12
