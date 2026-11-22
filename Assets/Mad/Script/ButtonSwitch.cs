@@ -4,6 +4,12 @@ using UnityEngine.Events;
 
 public class ButtonSwitch : MonoBehaviour
 {
+    public enum PressMode
+    {
+        Hold,
+        OneTime
+    }
+
     [Header("Visual")]
     [Tooltip("Child yang punya sprite (objek 'Trigger').")]
     [SerializeField] private Transform visual;
@@ -19,8 +25,8 @@ public class ButtonSwitch : MonoBehaviour
     [SerializeField] private bool ignoreOtherTriggers = true;
 
     [Header("Perilaku")]
-    [Tooltip("true = naik lagi saat dilepas. false = sekali tekan tetap turun.")]
-    [SerializeField] private bool releaseWhenEmpty = true;
+    [Tooltip("Hold = aktif selama diinjak. One Time = aktif setelah sekali diinjak.")]
+    [SerializeField] private PressMode pressMode = PressMode.Hold;
 
     [Header("Event")]
     public UnityEvent OnPressed;
@@ -91,7 +97,7 @@ public class ButtonSwitch : MonoBehaviour
             Debug.Log($"Tombol '{name}' diinjak.", this);
             OnPressed.Invoke();
         }
-        else if (!shouldPress && isPressed && releaseWhenEmpty)
+        else if (!shouldPress && isPressed && pressMode == PressMode.Hold)
         {
             isPressed = false;
             OnReleased.Invoke();
