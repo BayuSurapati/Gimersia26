@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8740900298588171330}
   - component: {fileID: 3000938213214038533}
   - component: {fileID: 3145808363084625678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sheep-Sedang
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}

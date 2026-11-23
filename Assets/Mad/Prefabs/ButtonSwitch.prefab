@@ -126,7 +126,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0021820664, y: 0.46628916}
+  m_Offset: {x: 0.0021820664, y: 0.14267415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +136,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.95199955, y: 0.2930473}
+  m_Size: {x: 0.95199955, y: 0.6885767}
   m_EdgeRadius: 0
 --- !u!1 &4545009599375203302
 GameObject:
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 8499718470630655321}
   - component: {fileID: 2097151790776284304}
   - component: {fileID: 1469386322841710155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ButtonSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -308,7 +308,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   ignoreOtherTriggers: 1
-  releaseWhenEmpty: 1
+  pressMode: 0
   OnPressed:
     m_PersistentCalls:
       m_Calls:
