@@ -47,6 +47,9 @@ public class CharacterController : MonoBehaviour
     public WeightBody Weight { get; private set; }
     public int FacingDirection { get; private set; } = 1;
 
+    /// <summary>Input kiri/kanan saat ini (-1..1). Dipakai SwingPlatform untuk "memompa" ayunan.</summary>
+    public float MoveInput => inputX;
+
     float inputX;
     float lastGroundedTime = -10f;
     float lastJumpPressedTime = -10f;
@@ -75,7 +78,14 @@ public class CharacterController : MonoBehaviour
         if (!IsActive) return;
 
         if (moveAction != null)
-            inputX = Mathf.Clamp(moveAction.action.ReadValue<Vector2>().x, -1f, 1f);
+        {
+            // Mendukung Move bertipe Vector2 (2D composite / stik utuh) maupun float (1D Axis)
+            InputAction move = moveAction.action;
+            inputX = move.activeValueType == typeof(Vector2)
+                ? move.ReadValue<Vector2>().x
+                : move.ReadValue<float>();
+            inputX = Mathf.Clamp(inputX, -1f, 1f);
+        }
 
         if (jumpAction != null && jumpAction.action.WasPressedThisFrame())
             lastJumpPressedTime = Time.time;

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5330079018227957964}
   m_Layer: 3
   m_Name: Sheep-Besar
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,9 +202,9 @@ MonoBehaviour:
   displayName: Domba
   moveAction: {fileID: -3349300601741260179, guid: bcb685e9cb99ea544b99de5cc94b4f22, type: 3}
   jumpAction: {fileID: -1369513637075862187, guid: bcb685e9cb99ea544b99de5cc94b4f22, type: 3}
-  moveSpeed: 4
+  moveSpeed: 5
   acceleration: 60
-  jumpVelocity: 7
+  jumpVelocity: 9
   strength: 3
   coyoteTime: 0.1
   jumpBuffer: 0.12

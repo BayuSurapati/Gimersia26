@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6625379009371751558}
   m_Layer: 3
   m_Name: Sheep-Kecil
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/B_Bayu/Scenes/TestingScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/B_Bayu/Scenes/Level-1.unity
+    guid: ae3fdbe9066f61a42b58663389edc415
+  - enabled: 1
+    path: Assets/B_Bayu/Scenes/Level-2.unity
+    guid: 85dc126c8efe8d34baddd5e294aec122
+  - enabled: 1
+    path: Assets/B_Bayu/Scenes/Level-3.unity
+    guid: ce31114b4cba63646b7dbc159d4facf6
+  - enabled: 1
+    path: Assets/B_Bayu/Scenes/Level-8.unity
+    guid: 16a4b876e058e3d4ab3773aa2274fa72
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
