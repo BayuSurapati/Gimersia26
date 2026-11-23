@@ -18,6 +18,18 @@ EditorBuildSettings:
     path: Assets/B_Bayu/Scenes/Level-3.unity
     guid: ce31114b4cba63646b7dbc159d4facf6
   - enabled: 1
+    path: Assets/Mad/Scene/Level 4.unity
+    guid: 7f1c469ce83a6194884c5061165ec6dc
+  - enabled: 1
+    path: Assets/Mad/Scene/Level 5.unity
+    guid: c18ac8d9828d14f46aee26b5de04c93c
+  - enabled: 1
+    path: Assets/Mad/Scene/Level 6.unity
+    guid: 51ebdfb2aac85d743a6c897f8071f8cf
+  - enabled: 1
+    path: Assets/Mad/Scene/Level 7.unity
+    guid: 02a0ee153c0946b4a9bb961d8866687a
+  - enabled: 1
     path: Assets/B_Bayu/Scenes/Level-8.unity
     guid: 16a4b876e058e3d4ab3773aa2274fa72
   m_configObjects:
