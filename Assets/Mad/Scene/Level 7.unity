@@ -171,6 +171,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep-Besar
       objectReference: {fileID: 0}
+    - target: {fileID: 5330079018227957964, guid: 8e1573aa6b3a5c14c872a921f608d318, type: 3}
+      propertyPath: growthPerBounce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330079018227957964, guid: 8e1573aa6b3a5c14c872a921f608d318, type: 3}
+      propertyPath: maxBounceVelocity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330079018227957964, guid: 8e1573aa6b3a5c14c872a921f608d318, type: 3}
+      propertyPath: initialBounceVelocity
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -291,6 +303,14 @@ PrefabInstance:
     - target: {fileID: 2265438290140959124, guid: 6e596326dea7daa478b3802cad332e44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145808363084625678, guid: 6e596326dea7daa478b3802cad332e44, type: 3}
+      propertyPath: maxBounceVelocity
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145808363084625678, guid: 6e596326dea7daa478b3802cad332e44, type: 3}
+      propertyPath: initialBounceVelocity
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5056556827200198394, guid: 6e596326dea7daa478b3802cad332e44, type: 3}
       propertyPath: m_Name
@@ -421,6 +441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheep-Kecil
       objectReference: {fileID: 0}
+    - target: {fileID: 6625379009371751558, guid: 812473b40f16ff643af23d19e2cf0023, type: 3}
+      propertyPath: maxBounceVelocity
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -448,6 +472,10 @@ PrefabInstance:
     - target: {fileID: 1465093810854440505, guid: 6e25533058e76d046b3b4b7293e2575c, type: 3}
       propertyPath: maxBounceVelocity
       value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212572938763558587, guid: 6e25533058e76d046b3b4b7293e2575c, type: 3}
+      propertyPath: m_Mass
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6198095981011102331, guid: 6e25533058e76d046b3b4b7293e2575c, type: 3}
       propertyPath: m_LocalPosition.x

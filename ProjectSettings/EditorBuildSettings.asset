@@ -32,6 +32,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/B_Bayu/Scenes/Level-8.unity
     guid: 16a4b876e058e3d4ab3773aa2274fa72
+  - enabled: 1
+    path: Assets/Mad/Scene/Level 11.unity
+    guid: 8ae5978b61dccdb4da226032af4445b7
+  - enabled: 1
+    path: Assets/Mad/Scene/Level 12.unity
+    guid: aa3a591f5d000bc4b9345c59ec3abd0a
+  - enabled: 1
+    path: Assets/Mad/Scene/Level 13.unity
+    guid: ad5cf01854f123c44b852746c3a2f263
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

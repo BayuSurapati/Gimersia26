@@ -57,12 +57,13 @@ public class Trampoline : MonoBehaviour
 
     private void Launch(Rigidbody2D rb, Vector2 up)
     {
-        // Tanpa BounceProfile: pantulan normal, tanpa efek makin tinggi
         BounceProfile profile = rb.GetComponent<BounceProfile>();
-        float multiplier = profile != null ? profile.BounceMultiplier : 1f;
         int chain = profile != null ? profile.ChainCount : 0;
+        float initialVelocity = profile != null ? profile.InitialBounceVelocity : bounceVelocity;
+        float growth = profile != null ? profile.GrowthPerBounce : growthPerBounce;
+        float maxVelocity = profile != null ? profile.MaxBounceVelocity : maxBounceVelocity;
 
-        float speed = Mathf.Min(bounceVelocity + chain * growthPerBounce, maxBounceVelocity) * multiplier;
+        float speed = Mathf.Min(initialVelocity + chain * growth, maxVelocity);
 
         Vector2 v = rb.linearVelocity;
         Vector2 sideways = v - up * Vector2.Dot(v, up);

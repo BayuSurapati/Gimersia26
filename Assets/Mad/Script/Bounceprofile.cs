@@ -3,9 +3,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BounceProfile : MonoBehaviour
 {
-    [Header("Tinggi pantulan")]
-    [Tooltip("Pengali tinggi pantulan. 1 = normal, 1.5 = lebih tinggi, 0.7 = lebih rendah.")]
-    [SerializeField] private float bounceMultiplier = 1f;
+    [Header("Pantulan")]
+    [Tooltip("Kecepatan lontar pada pantulan pertama (unit/detik).")]
+    [SerializeField] private float initialBounceVelocity = 6f;
+    [Tooltip("Tambahan kecepatan pada setiap pantulan berantai.")]
+    [SerializeField] private float growthPerBounce = 1f;
+    [Tooltip("Batas maksimum kecepatan lontar.")]
+    [SerializeField] private float maxBounceVelocity = 16f;
 
     [Header("Pantulan berantai")]
     [Tooltip("true = makin lama memantul di trampolin, makin tinggi terbang.")]
@@ -14,7 +18,9 @@ public class BounceProfile : MonoBehaviour
     [Tooltip("Seberapa 'di atas' titik sentuh pusat hewan harus berada agar dianggap mendarat (bukan menabrak dinding).")]
     [SerializeField] private float landThreshold = 0.1f;
 
-    public float BounceMultiplier => bounceMultiplier;
+    public float InitialBounceVelocity => initialBounceVelocity;
+    public float GrowthPerBounce => growthPerBounce;
+    public float MaxBounceVelocity => maxBounceVelocity;
 
     /// <summary>Jumlah pantulan berturut-turut sejauh ini.</summary>
     public int ChainCount { get; private set; }

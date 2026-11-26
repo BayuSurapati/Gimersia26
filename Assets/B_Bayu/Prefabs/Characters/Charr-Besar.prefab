@@ -177,7 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9495e0931ffeae541a9a0d848960e091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BounceProfile
-  bounceMultiplier: 0.5
+  initialBounceVelocity: 3
+  growthPerBounce: 0.5
+  maxBounceVelocity: 8
   chainEnabled: 1
   landThreshold: 0.1
 --- !u!60 &4442954230307254651
