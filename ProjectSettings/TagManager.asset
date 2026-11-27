@@ -38,8 +38,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background-Envi
+    uniqueID: 693802021
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 1937806317
+    locked: 0
+  - name: Grass
+    uniqueID: 4055490677
+    locked: 0
+  - name: Player
+    uniqueID: 3954891941
+    locked: 0
+  - name: Ombak
+    uniqueID: 2197789487
     locked: 0
   m_RenderingLayers:
   - Default

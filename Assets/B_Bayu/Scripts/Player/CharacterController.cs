@@ -34,6 +34,12 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float jumpBuffer = 0.12f;
     [Tooltip("Jatuh lebih cepat daripada naik, supaya lompatan terasa mantap")]
     [SerializeField] float fallGravityMultiplier = 1.8f;
+    [Tooltip("Sesaat setelah lompat, pijakan diabaikan (mencegah lompat dobel karena sensor masih menyentuh lantai)")]
+    [SerializeField] float groundIgnoreAfterJump = 0.1f;
+
+    [Header("Debug lompat (lihat saat Play)")]
+    [SerializeField] bool debugGrounded;
+    [SerializeField] bool debugCanJump;
 
     [Header("Visual (opsional)")]
     [SerializeField] SpriteRenderer spriteRenderer;
@@ -53,6 +59,7 @@ public class CharacterController : MonoBehaviour
     float inputX;
     float lastGroundedTime = -10f;
     float lastJumpPressedTime = -10f;
+    float lastJumpTime = -10f;
     float baseGravity;
 
     void Awake()
@@ -99,26 +106,33 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Weight.IsGrounded) lastGroundedTime = Time.time;
+        bool grounded = Weight.IsGrounded && Time.time - lastJumpTime > groundIgnoreAfterJump;
+        if (grounded) lastGroundedTime = Time.time;
 
-        // Ikut terbawa pijakan (karakter lain, platform bergerak, jungkat-jungkit)
-        float carryX = 0f;
-        if (Weight.Support != null && Weight.Support.attachedRigidbody != null)
-            carryX = Weight.Support.attachedRigidbody.GetPointVelocity(Body.position).x;
+        // Kecepatan pijakan (karakter lain, platform bergerak, ayunan, jungkat-jungkit)
+        Vector2 supportVel = Vector2.zero;
+        if (grounded && Weight.Support != null && Weight.Support.attachedRigidbody != null)
+            supportVel = Weight.Support.attachedRigidbody.GetPointVelocity(Body.position);
 
         Vector2 v = Body.linearVelocity;
 
-        float targetX = inputX * moveSpeed + carryX;
+        float targetX = inputX * moveSpeed + supportVel.x;
         v.x = Mathf.MoveTowards(v.x, targetX, acceleration * Time.fixedDeltaTime);
 
         bool canJump = Time.time - lastGroundedTime <= coyoteTime;
         bool wantsJump = Time.time - lastJumpPressedTime <= jumpBuffer;
         if (canJump && wantsJump)
         {
-            v.y = jumpVelocity;
+            // Lompat relatif terhadap pijakan yang sedang naik (lift / ayunan),
+            // supaya lompatan dari pijakan bergerak tidak terasa "tertahan"
+            v.y = jumpVelocity + Mathf.Max(0f, supportVel.y);
             lastJumpPressedTime = -10f;
             lastGroundedTime = -10f;
+            lastJumpTime = Time.time;
         }
+
+        debugGrounded = grounded;
+        debugCanJump = canJump;
 
         Body.linearVelocity = v;
         Body.gravityScale = v.y < 0f ? baseGravity * fallGravityMultiplier : baseGravity;
