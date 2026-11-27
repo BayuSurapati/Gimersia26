@@ -650,9 +650,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6dc9c668b154042b678bc831464466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenableObject
+  mode: 0
   openOffset: {x: 0, y: 2, z: 0}
   offsetSpace: 1
-  speed: 4
+  moveSpeed: 4
+  openRotation: {x: 0, y: 0, z: 90}
+  rotationPivot: {fileID: 0}
+  rotateSpeed: 90
   startOpen: 0
 --- !u!61 &907886396
 BoxCollider2D:

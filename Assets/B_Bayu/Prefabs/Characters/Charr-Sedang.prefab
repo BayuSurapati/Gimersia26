@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3000938213214038533}
   - component: {fileID: 3145808363084625678}
   - component: {fileID: 2376046843438840493}
+  - component: {fileID: 7938704813139230160}
   m_Layer: 0
   m_Name: Charr-Sedang
   m_TagString: Player
@@ -82,9 +83,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -340075355
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1005447870353208189, guid: 124f5d172ec011a419bbcdddd8192e05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -140,6 +141,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   maxGroundAngle: 50
+  maxStackAngle: 75
   sideInset: 0.1
 --- !u!114 &3000938213214038533
 MonoBehaviour:
@@ -163,6 +165,9 @@ MonoBehaviour:
   coyoteTime: 0.1
   jumpBuffer: 0.12
   fallGravityMultiplier: 1.8
+  groundIgnoreAfterJump: 0.1
+  debugGrounded: 0
+  debugCanJump: 0
   spriteRenderer: {fileID: 7286568434367701757}
   activeOnStart: 0
 --- !u!114 &3145808363084625678
@@ -790,3 +795,22 @@ PolygonCollider2D:
       - {x: -4.0349255, y: -16.332607}
       - {x: -3.8902469, y: -16.18793}
   m_UseDelaunayMesh: 1
+--- !u!114 &7938704813139230160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056556827200198394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2281da3934a23d44b1e2f90a2890c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeightBody
+  groundCheckDistance: 0.06
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  maxGroundAngle: 50
+  maxStackAngle: 75
+  sideInset: 0.1
